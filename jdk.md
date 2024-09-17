@@ -13,7 +13,7 @@
 <!--monopod:end-->
 
 <!--overview:start-->
-Minimalist Wolfi-based Java JDK image using using [OpenJDK](https://openjdk.org/projects/jdk/).  Used for compiling Java applications.
+Minimalist Wolfi-based Java JDK image using using [OpenJDK](https://openjdk.org/projects/jdk/).  Used for developing Java applications.
 <!--overview:end-->
 
 <!--getting:start-->
@@ -29,7 +29,11 @@ docker pull cgr.dev/chainguard/jdk:latest
 
 The latest builds of Chainguard's JDK image passes the TCK for OpenJDK Java 21.0.3 and Java 22.0.1 as provided by [Oracle under the OpenJDK Community TCK License Agreement](https://openjdk.org/groups/conformance/JckAccess/index.html) (OCTLA) and are Java Compatibility Kit (JCK) conformant.
 
-## Java Application Example
+## Purpose
+
+A JDK is the standard development system for a Java application. It is used for compiling and packaging Java application, which is then subsequently run on a JRE.
+
+## Compiling a Minimal Java Application Example
 
 This section outlines how you can build a Java application with the Chainguard JDK Image.
 
@@ -77,4 +81,11 @@ docker run my-java-app
 ```
 Hello Wolfi users!
 ```
+
+## Using the JDK to create a custom JRE
+
+- [Creating your own runtime using jlink](https://adoptium.net/en-GB/blog/2021/10/jlink-to-produce-own-runtime/)
+- https://adriankodja.com/creating-a-custom-jre-for-your-java-applications
+
 <!--body:end-->
+
