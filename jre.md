@@ -26,10 +26,9 @@ docker pull cgr.dev/chainguard/jre:latest
 <!--getting:end-->
 
 <!--body:start-->
+## Compatibility Notes
 
-The latest builds of Chainguard's JRE image passes the TCK for OpenJDK Java 21.0.3 and Java 22.0.1 as provided by [Oracle under the OpenJDK Community TCK License Agreement](https://openjdk.org/groups/conformance/JckAccess/index.html) (OCTLA) and are Java Compatibility Kit (JCK) conformant.
-
-## Purpose
+## Getting Started
 
 A JRE is the standard runtime for a Java application. It is used for running an already developed, and packaged Java application. Generally you will combine your application with the Chainguard JRE image with Docker or a build tool like [Maven](https://apache.maven.org) or [Gradle](https://gradle.org/)
 
@@ -43,4 +42,11 @@ There is an easy way shown in the example to use the `cgr.dev/chainguard/jre` im
 
 Using [Helm](https://helm.sh/) to deploy your JRE-based application image is relatively straight forward using either [https://github.com/gruntwork-io/helm-kubernetes-services/blob/main/charts/k8s-service](https://github.com/gruntwork-io/helm-kubernetes-services/blob/main/charts/k8s-service/README.md) or [https://artifacthub.io/packages/helm/kvalitetsit/service](https://artifacthub.io/packages/helm/kvalitetsit/service)
 
+## Documentation and Resources
+
+- [How to Migrate a Java Application to Chainguard Images](https://edu.chainguard.dev/chainguard/chainguard-images/videos/java-images/) (video)
+- [Building Minimal Images for Applications with Runtimes](https://edu.chainguard.dev/chainguard/chainguard-images/videos/minimal-runtime-images/) (video)
+- [Building minimal and low CVE images for Java](https://www.chainguard.dev/unchained/building-minimal-and-low-cve-images-for-java)
+
+The latest builds of Chainguard's JRE image passes the TCK for OpenJDK Java 21.0.3 and Java 22.0.1 as provided by [Oracle under the OpenJDK Community TCK License Agreement](https://openjdk.org/groups/conformance/JckAccess/index.html) (OCTLA) and are [Java Compatibility Kit (JCK) conformant](https://www.chainguard.dev/unchained/chainguards-openjdk-java-images-are-now-jck-conformant).
 <!--body:end-->

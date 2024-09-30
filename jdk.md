@@ -26,10 +26,9 @@ docker pull cgr.dev/chainguard/jdk:latest
 <!--getting:end-->
 
 <!--body:start-->
+## Compatibility Notes
 
-The latest builds of Chainguard's JDK image passes the TCK for OpenJDK Java 21.0.3 and Java 22.0.1 as provided by [Oracle under the OpenJDK Community TCK License Agreement](https://openjdk.org/groups/conformance/JckAccess/index.html) (OCTLA) and are Java Compatibility Kit (JCK) conformant.
-
-## Purpose
+## Getting Started
 
 A JDK is the standard development system for a Java application. It is used for compiling and packaging Java application, which is then subsequently run on a JRE.
 
@@ -113,5 +112,12 @@ For reference here are two additional articles describing the use of `jlink` to 
 - [Creating your own runtime using jlink](https://adoptium.net/en-GB/blog/2021/10/jlink-to-produce-own-runtime/)
 - https://adriankodja.com/creating-a-custom-jre-for-your-java-applications
 
+## Documentation and Resources
+
+- [How to Migrate a Java Application to Chainguard Images](https://edu.chainguard.dev/chainguard/chainguard-images/videos/java-images/) (video)
+- [Building Minimal Images for Applications with Runtimes](https://edu.chainguard.dev/chainguard/chainguard-images/videos/minimal-runtime-images/) (video)
+- [Building minimal and low CVE images for Java](https://www.chainguard.dev/unchained/building-minimal-and-low-cve-images-for-java)
+
+The latest builds of Chainguard's JRE image passes the TCK for OpenJDK Java 21.0.3 and Java 22.0.1 as provided by [Oracle under the OpenJDK Community TCK License Agreement](https://openjdk.org/groups/conformance/JckAccess/index.html) (OCTLA) and are [Java Compatibility Kit (JCK) conformant](https://www.chainguard.dev/unchained/chainguards-openjdk-java-images-are-now-jck-conformant).
 <!--body:end-->
 
