@@ -31,10 +31,16 @@ The latest builds of Chainguard's JRE image passes the TCK for OpenJDK Java 21.0
 
 ## Purpose
 
-A JRE is the standard runtime for a Java application. It is used for running an already developed Java application.
+A JRE is the standard runtime for a Java application. It is used for running an already developed, and packaged Java application. Generally you will combine your application with the Chainguard JRE image with Docker or a build tool like [Maven](https://apache.maven.org) or [Gradle](https://gradle.org/)
 
-## Running a Java Application 
+## Using JIB to build a JRE-based application image
 
-- Show an example of packaging a SpringBoot application with the JRE base image and running.
+Using Maven or Gradle you can compile and package your application. There is a great example application that works with Maven or Gradle here: [https://github.com/GoogleContainerTools/jib/tree/master/examples/spring-boot](https://github.com/GoogleContainerTools/jib/tree/master/examples/spring-boot)
+
+There is an easy way shown in the example to use the `cgr.dev/chainguard/jre` image from the Maven or Gradle project.
+
+## Using Helm to Deploy your Java Application
+
+Using [Helm](https://helm.sh/) to deploy your JRE-based application image is relatively straight forward using either [https://github.com/gruntwork-io/helm-kubernetes-services/blob/main/charts/k8s-service](https://github.com/gruntwork-io/helm-kubernetes-services/blob/main/charts/k8s-service/README.md) or [https://artifacthub.io/packages/helm/kvalitetsit/service](https://artifacthub.io/packages/helm/kvalitetsit/service)
 
 <!--body:end-->

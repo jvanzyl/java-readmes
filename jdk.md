@@ -82,8 +82,34 @@ docker run my-java-app
 Hello Wolfi users!
 ```
 
-## Using the JDK to create a custom JRE
+## Using the Chainguard JDK image in a Jenkins Pipeline
 
+Using a Chainguard image as part of a CI/CD system like Jenkins might also be a useful option. With the Jenkins docker agent, you can have various steps utilizing different Chainguard images. Below is an example using the Chainguard JDK image as part of a Jenkins pipeline:
+
+```
+pipeline {
+    agent {
+        docker { image 'cgr.dev/chainguard/jdk' }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                # Use javac, jdeps, jlink, ...
+                sh 'javac -version'
+            }
+        }
+    }
+}
+```
+
+For a full reference how to use various images in a Jenkins pipeline you can look at [https://www.jenkins.io/doc/book/pipeline/docker/
+](https://www.jenkins.io/doc/book/pipeline/docker/).
+
+## Using the Chainguard JDK to create a custom JRE
+
+A less common, but powerful, usecase is creating an optimized, custom JRE for your Java application. This involves using `jdeps` to produce the information about the Java modules being used, and subsequently using `jlink` to analyze your application to eliminate all module code not being used by your application. This can create a drastically smaller JRE for a particular application. Keep in mind a JRE produced this way is a fit-for-purpose JRE, and is not generally usable. You can see a full example of using the Chainguard JDK image to produce a custom JRE here: [https://github.com/chainguard-dev/jlink-springboot-demo](https://github.com/chainguard-dev/jlink-springboot-demo).
+
+For reference here are two additional articles describing the use of `jlink` to create optimzed application images: 
 - [Creating your own runtime using jlink](https://adoptium.net/en-GB/blog/2021/10/jlink-to-produce-own-runtime/)
 - https://adriankodja.com/creating-a-custom-jre-for-your-java-applications
 
